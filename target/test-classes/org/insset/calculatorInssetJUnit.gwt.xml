@@ -4,6 +4,6 @@
   <inherits name='org.insset.calculatorInsset' />
 
   <!-- Specify the path to any remote services.                   -->
-  <servlet path="/calculatorInsset/greet" class="org.insset.server.GreetingServiceImpl" />
+  <servlet path="/calculatorInsset/exemple" class="org.insset.server.ExempleServiceImpl" />
 
 </module>
