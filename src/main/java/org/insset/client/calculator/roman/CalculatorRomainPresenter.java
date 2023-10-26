@@ -146,6 +146,7 @@ public class CalculatorRomainPresenter extends Composite {
      */
     private void convertArabeToRoman() {
         Integer value = null;
+        
         try {
             value = Integer.parseInt(valA.getText());
         } catch (NumberFormatException e) {
@@ -158,17 +159,42 @@ public class CalculatorRomainPresenter extends Composite {
             errorLabelAToR.setText("Format incorect");
             return;
         }
+        if(value < 1 || value >4000){
+            errorLabelAToR.addStyleName("serverResponseLabelError");
+            errorLabelAToR.setText("Valeur trop grande");
+            return;
+        }
+        
+        final String convertedValue = convertionArabeToRoman(value);
+        
+        
+        
         service.convertArabeToRoman(Integer.parseInt(valA.getText()), new AsyncCallback<String>() {
             public void onFailure(Throwable caught) {
                 // Show the RPC error message to the user
             }
 
             public void onSuccess(String result) {
+                
                 errorLabelAToR.setText(" ");
-                new DialogBoxInssetPresenter("Convertion Arabe to Roman", valA.getText(), result);
+                new DialogBoxInssetPresenter("Convertion Arabe to Roman", valA.getText(), convertedValue);
             }
         });
     }
+    
+    /*
+        Permet de convertir directement un nombre arabe en nombre romain
+        Value int : la valeur a convertire
+    */
+    private String convertionArabeToRoman(int value){
+        String[] unite = {"", "I", "II","III", "IV", "V", "VI", "VII", "VIII", "IX"};
+        String[] dizaine = {"", "X", "XX","XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+        String[] centaine = {"", "C", "CC","CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+        String[] mille = {"", "M", "MM", "MMM"};
+        String convertedValue = null;
+        
+        return convertedValue = mille[value/1000]+centaine[(value%1000)/100]+dizaine[(value%100)/10]+unite[(value%10)/1];
+    };
 
     /**
      * call server
