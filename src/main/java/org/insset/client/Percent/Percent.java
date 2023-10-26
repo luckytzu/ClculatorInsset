@@ -11,12 +11,21 @@ package org.insset.client.Percent;
  */
 public class Percent {
     
-    private void Divider(int divided, int divider) {
-        if(divider > 0 && divider <= 200 && divided > 0 && divided <= 200 ){
-            int remain = divided % divider;
-            int quotient = divided / divider;
+    private String Divider(int divided, int divider) {
+        int quotient = 0;
+        int remain = 0;
         
+        if(divider > 0 && divider <= 200 && divided > 0 && divided <= 200 ){
+            remain = divided % divider;
+            quotient = divided / divider;
+            
+            return "Le résultat de la division est "+quotient+" et le reste : "+remain;
+
         }
+        else {
+            return "Les valeurs entrés ne sont pas correctes";
+        }
+
     }
     
     
