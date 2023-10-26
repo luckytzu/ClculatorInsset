@@ -27,7 +27,16 @@ public class Percent {
         }
 
     }
-    
-    
+    public String GetInitPriceWith(int finalPrice, float percent) 
+    {
+
+    // Calcul du prix initial
+    double initPrice = finalPrice / (1 + percent / 100);
+
+    // Conversion du prix initial en String
+    String initPriceStr = String.valueOf(initPrice);
+
+    return initPriceStr;
+    }   
     
 }
