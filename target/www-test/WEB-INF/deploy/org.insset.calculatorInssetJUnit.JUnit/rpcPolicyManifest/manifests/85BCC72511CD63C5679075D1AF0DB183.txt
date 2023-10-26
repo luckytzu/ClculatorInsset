@@ -1,2 +1,0 @@
-serviceClass: org.insset.client.GreetingService
-path: 94756CD62EE14D6FDB91D0C061ABF245.gwt.rpc
