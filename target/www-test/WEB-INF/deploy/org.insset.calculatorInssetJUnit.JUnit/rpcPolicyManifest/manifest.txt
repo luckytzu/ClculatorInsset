@@ -1,2 +1,0 @@
-# Module org.insset.calculatorInssetJUnit.JUnit
-# RPC service class, partial path of RPC policy file

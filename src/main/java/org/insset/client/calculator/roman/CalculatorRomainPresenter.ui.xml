@@ -12,13 +12,12 @@
             </g:FlowPanel>
             <g:FlowPanel>          
               <g:TextBox ui:field="valR" text="Entrer une valeur"/>
-              <g:SubmitButton ui:field="boutonConvertRToA" text="Convertir"/>
             </g:FlowPanel>
             <g:FlowPanel>
                 <g:Label ui:field="errorLabelRToA" ></g:Label>
             </g:FlowPanel>
             <g:FlowPanel >
-                
+                <g:SubmitButton ui:field="boutonConvertRToA" text="Convertir"/>
                 <g:ResetButton ui:field="boutonClearR" text="Clear"/>
             </g:FlowPanel>
         </g:FlowPanel>
@@ -30,13 +29,12 @@
             </g:FlowPanel>
             <g:FlowPanel>          
               <g:TextBox ui:field="valA" text="Entrer une valeur"/>
-              <g:SubmitButton ui:field="boutonConvertAToR" text="Convertir"/>
             </g:FlowPanel>
             <g:FlowPanel>
                 <g:Label ui:field="errorLabelAToR" ></g:Label>
             </g:FlowPanel>
             <g:FlowPanel>
-                
+                <g:SubmitButton ui:field="boutonConvertAToR" text="Convertir"/>
                 <g:ResetButton ui:field="boutonClearA" text="Clear"/>
             </g:FlowPanel>
         </g:FlowPanel>
@@ -48,13 +46,12 @@
             </g:FlowPanel>
             <g:FlowPanel>          
               <g:TextBox ui:field="valD" text="Entrer une valeur"/>
-              <g:SubmitButton ui:field="boutonConvertD" text="Convertir"/>
             </g:FlowPanel>
             <g:FlowPanel>
                 <g:Label ui:field="errorLabelD" ></g:Label>
             </g:FlowPanel>
             <g:FlowPanel>
-                
+                <g:SubmitButton ui:field="boutonConvertD" text="Convertir"/>
                 <g:ResetButton ui:field="boutonClearD" text="Clear"/>
             </g:FlowPanel>
         </g:FlowPanel>
