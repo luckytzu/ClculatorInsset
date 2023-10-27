@@ -17,27 +17,24 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
         RomanConverterService {
 
     @Override
-    public String convertDateYears(String nbr) throws IllegalArgumentException {
+    public String convertDateYears(String nbr) {
         int day = 0;
         int month = 0;
         int year = 0;
         
-        try{
-            String[] components = nbr.split("/");
-            day = Integer.parseInt(components[0]);
-            month = Integer.parseInt(components[1]);
-            year = Integer.parseInt(components[2]);
-        } catch (NumberFormatException e){
-            
-        }
+      
+        String[] components = nbr.split("/");
+        day = Integer.parseInt(components[0]);
+        month = Integer.parseInt(components[1]);
+        year = Integer.parseInt(components[2]);
         
-        final String convertedValue = convertArabeToRoman(day)+"/"+convertArabeToRoman(month)+"/"+convertArabeToRoman(year);
+        
         //Implement your code
-        return convertedValue;
+        return convertArabeToRoman(day)+"/"+convertArabeToRoman(month)+"/"+convertArabeToRoman(year);
     }
 
     @Override
-    public Integer convertRomanToArabe(String nbr) throws IllegalArgumentException {
+    public Integer convertRomanToArabe(String nbr) {
         char[] charArray = nbr.toCharArray();
         int result = 0;
         int valueIntofCharPrev = 0;
@@ -73,14 +70,13 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
     }
 
     @Override
-    public String convertArabeToRoman(Integer nbr) throws IllegalArgumentException {
+    public String convertArabeToRoman(Integer nbr) {
         String[] unite = {"", "I", "II","III", "IV", "V", "VI", "VII", "VIII", "IX"};
         String[] dizaine = {"", "X", "XX","XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
         String[] centaine = {"", "C", "CC","CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
         String[] mille = {"", "M", "MM", "MMM"};
-        String convertedValue = null;
 
-        return convertedValue = mille[nbr/1000]+centaine[(nbr%1000)/100]+dizaine[(nbr%100)/10]+unite[(nbr%10)/1];
+        return mille[nbr/1000]+centaine[(nbr%1000)/100]+dizaine[(nbr%100)/10]+unite[(nbr%10)/1];
     }
 
 }

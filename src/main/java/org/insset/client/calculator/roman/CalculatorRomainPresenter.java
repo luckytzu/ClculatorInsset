@@ -145,7 +145,7 @@ public class CalculatorRomainPresenter extends Composite {
     /**
      * call server
      */
-    public void convertArabeToRoman() {
+    private void convertArabeToRoman() {
         Integer value = null;
         
         try {
@@ -182,11 +182,7 @@ public class CalculatorRomainPresenter extends Composite {
     /**
      * call server
      */
-    public void convertDate() {
-        String date = valD.getText(); 
-        int day = 0;
-        int month = 0;
-        int year = 0;
+    private void convertDate() {
         //Verif
         if (!FieldVerifier.isValidDate(valD.getText())) {
             errorLabelD.addStyleName("serverResponseLabelError");

@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package org.insset.server;
+import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import org.insset.client.service.RomanConverterService;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -43,13 +45,12 @@ public class RomanConverterServiceImplTest {
     @Test
     public void testConvertDateYears() {
         System.out.println("convertDateYears");
-        String nbr = "";
+        String nbr = "27/10/2023";
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
-        String expResult = "";
+        String expResult = "XXVII/X/MMXXIII";
         String result = instance.convertDateYears(nbr);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,15 +58,17 @@ public class RomanConverterServiceImplTest {
      */
     @Test
     public void testConvertRomanToArabe() {
-        System.out.println("convertRomanToArabe");
-        String nbr = "2";
+        //given
+        String nbr = "II";
+        Integer expResult = 2;
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
-        Integer expResult = null;
+        
+        //when
         Integer result = instance.convertRomanToArabe(nbr);
+        
+        //then
         assertEquals(expResult, result);
-        System.out.println(result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -74,14 +77,12 @@ public class RomanConverterServiceImplTest {
     @Test
     public void testConvertArabeToRoman() {
         System.out.println("convertArabeToRoman");
-        Integer nbr = null;
+        Integer nbr = 2;
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
         String expResult = "II";
         String result = instance.convertArabeToRoman(nbr);
         assertEquals(expResult, result);
-        System.out.println(result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
