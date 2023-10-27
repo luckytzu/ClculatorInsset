@@ -4,15 +4,14 @@
  * and open the template in the editor.
  */
 package org.insset.server;
-import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import org.insset.client.service.RomanConverterService;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -42,7 +41,7 @@ public class RomanConverterServiceImplTest {
     /**
      * Test of convertDateYears method, of class RomanConverterServiceImpl.
      */
-    @Test
+    @org.junit.Test
     public void testConvertDateYears() {
         System.out.println("convertDateYears");
         String nbr = "27/10/2023";
@@ -56,7 +55,7 @@ public class RomanConverterServiceImplTest {
     /**
      * Test of convertRomanToArabe method, of class RomanConverterServiceImpl.
      */
-    @Test
+    @org.junit.Test
     public void testConvertRomanToArabe() {
         //given
         String nbr = "II";
@@ -74,7 +73,7 @@ public class RomanConverterServiceImplTest {
     /**
      * Test of convertArabeToRoman method, of class RomanConverterServiceImpl.
      */
-    @Test
+    @org.junit.Test
     public void testConvertArabeToRoman() {
         System.out.println("convertArabeToRoman");
         Integer nbr = 2;
