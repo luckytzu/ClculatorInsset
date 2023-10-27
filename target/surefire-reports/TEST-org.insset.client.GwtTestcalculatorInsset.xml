@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="org.insset.client.GwtTestcalculatorInsset" time="7.781" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="org.insset.client.GwtTestcalculatorInsset" time="5.794" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/local/java/jdk1.8.0_271/jre/lib/amd64"/>
@@ -60,6 +60,6 @@
     <property name="sun.font.fontmanager" value="sun.awt.X11FontManager"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="org.insset.client.GwtTestcalculatorInsset" name="testFieldVerifier" time="7.631"/>
-  <testcase classname="org.insset.client.GwtTestcalculatorInsset" name="testExempleService" time="0.141"/>
+  <testcase classname="org.insset.client.GwtTestcalculatorInsset" name="testFieldVerifier" time="5.525"/>
+  <testcase classname="org.insset.client.GwtTestcalculatorInsset" name="testExempleService" time="0.266"/>
 </testsuite>

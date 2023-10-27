@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------------
 Test set: org.insset.client.GwtTestcalculatorInsset
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.786 sec
-testFieldVerifier(org.insset.client.GwtTestcalculatorInsset)  Time elapsed: 7.634 sec
-testExempleService(org.insset.client.GwtTestcalculatorInsset)  Time elapsed: 0.141 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.798 sec
+testFieldVerifier(org.insset.client.GwtTestcalculatorInsset)  Time elapsed: 5.527 sec
+testExempleService(org.insset.client.GwtTestcalculatorInsset)  Time elapsed: 0.266 sec
