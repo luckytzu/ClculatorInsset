@@ -9,6 +9,7 @@ import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.ui.RootPanel;
 import org.insset.client.exemple.ExemplePresenter;
+import org.insset.client.percent.PercentPresenter;
 import org.insset.client.calculator.roman.CalculatorRomainPresenter;
 
 /**
@@ -19,6 +20,13 @@ public class HistoryListener implements ValueChangeHandler<String> {
 
     @Override
     public void onValueChange(ValueChangeEvent<String> event) {
+
+
+        //Accès a la page de conversion roman
+        if (event.getValue().equals("pourcentage")) {
+            RootPanel.get().clear();
+            RootPanel.get().add(new PercentPresenter());
+        }
 
         //Accès a la page de conversion roman
         if (event.getValue().equals("roman")) {
