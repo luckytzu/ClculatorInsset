@@ -200,12 +200,35 @@ public class CalculatorRomainPresenter extends Composite {
      * call server
      */
     private void convertDate() {
+        String date = valD.getText(); 
+        int day = 0;
+        int month = 0;
+        int year = 0;
         //Verif
         if (!FieldVerifier.isValidDate(valD.getText())) {
-            errorLabelAToR.addStyleName("serverResponseLabelError");
-            errorLabelAToR.setText("Format incorect");
+            errorLabelD.addStyleName("serverResponseLabelError");
+            errorLabelD.setText("Format incorect");
             return;
         }
+        try{
+            String[] components = date.split("/");
+            day = Integer.parseInt(components[0]);
+            month = Integer.parseInt(components[1]);
+            year = Integer.parseInt(components[2]);
+            
+            if(day > 31 || month > 12){
+                errorLabelD.addStyleName("serverResponseLabelError");
+                errorLabelD.setText("Format incorrect : Valeur trop élever");
+                return;
+            }
+        } catch(NumberFormatException e){
+            errorLabelD.addStyleName("serverResponseLabelError");
+            errorLabelD.setText("Format incorect");
+            return;
+        }
+        
+        
+        final String convertedValue = convertionArabeToRoman(day)+"/"+convertionArabeToRoman(month)+"/"+convertionArabeToRoman(year);
         //call server
         service.convertDateYears(valD.getText(), new AsyncCallback<String>() {
             public void onFailure(Throwable caught) {
@@ -215,7 +238,7 @@ public class CalculatorRomainPresenter extends Composite {
 
             public void onSuccess(String result) {
                 errorLabelD.setText(" ");
-                new DialogBoxInssetPresenter("Convertion Date", valD.getText(), result);
+                new DialogBoxInssetPresenter("Convertion Date", valD.getText(), convertedValue);
             }
         });
     }
