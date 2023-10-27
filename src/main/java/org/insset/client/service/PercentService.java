@@ -11,14 +11,5 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("percent")
 public interface PercentService extends RemoteService {
 
-    /**
-     * Convertion Obtenir prix initial avec prix final et pourcentage
-     *
-     * @param nbr
-     * @param nb
-     * @return
-     * @throws IllegalArgumentException
-     */
-    String Divider(Integer nbr, Integer nb) throws IllegalArgumentException;
 
 }

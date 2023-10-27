@@ -48,27 +48,6 @@ public class PercentPresenter extends Composite {
             }
         });}
 
-    
-    
-    //Methode qui permet de diviser 2 nombres et d'obtenir leurs reste
-    private String Divider(int divided, int divider) {
-        
-        if(divider > 0 && divider <= 200 && divided > 0 && divided <= 200 ){
-            
-            //Le reste de la division
-            int remain = divided % divider;
-            
-            //Le résultat de la division (2 si(4/2))
-            int quotient = divided / divider;
-            
-            return "Le résultat de la division est "+quotient+" et le reste : "+remain;
-
-        }
-        else {
-            return "Les valeurs entrés ne sont pas correctes";
-        }
-
-    }
 
        
     

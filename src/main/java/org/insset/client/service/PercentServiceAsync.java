@@ -13,14 +13,5 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
  */
 public interface PercentServiceAsync {
 
-    /**
-     * Convertion Obtenir prix initial avec prix final et pourcentage
-     *
-     * @param nbr
-     * @param nb
-     * @param callback
-     * @throws IllegalArgumentException
-     */
-    void Divider(Integer nbr, Integer nb, AsyncCallback<String> callback);
-
+ 
 }

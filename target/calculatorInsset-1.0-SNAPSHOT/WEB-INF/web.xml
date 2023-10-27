@@ -37,6 +37,16 @@
     <url-pattern>/calculatorInsset/pourcentage</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>division</servlet-name>
+    <servlet-class>org.insset.sserver.DivisionPresenterImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>division</servlet-name>
+    <url-pattern>/calculatorInsset/division</url-pattern>
+  </servlet-mapping>
+  
   <!-- Add your servlet -->
   
   <!-- Default page to serve -->
