@@ -1,0 +1,17 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+         xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        xmlns:menu="urn:import:org.insset.client.menu">
+
+<g:HTMLPanel>
+    <menu:Menu ui:field="menu"/>
+    <h1>Projet de mise en pratique Scrum</h1>       
+    <div class="bs-section">
+        <g:FlowPanel>
+                <g:ResetButton ui:field="boutonClearD" text="Clear"/>
+        </g:FlowPanel>
+      <!--</g:Form>-->
+    </div>
+    <!-- E. Container Right -->
+
+  </g:HTMLPanel>
+</ui:UiBinder>
