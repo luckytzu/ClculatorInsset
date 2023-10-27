@@ -141,11 +141,13 @@ public class CalculatorRomainPresenter extends Composite {
         });
     }
 
+
     /**
      * call server
      */
     private void convertArabeToRoman() {
         Integer value = null;
+        
         try {
             value = Integer.parseInt(valA.getText());
         } catch (NumberFormatException e) {
@@ -158,12 +160,19 @@ public class CalculatorRomainPresenter extends Composite {
             errorLabelAToR.setText("Format incorect");
             return;
         }
+        if(value < 1 || value >4000){
+            errorLabelAToR.addStyleName("serverResponseLabelError");
+            errorLabelAToR.setText("Valeur trop grande");
+            return;
+        }
+
         service.convertArabeToRoman(Integer.parseInt(valA.getText()), new AsyncCallback<String>() {
             public void onFailure(Throwable caught) {
                 // Show the RPC error message to the user
             }
 
             public void onSuccess(String result) {
+                
                 errorLabelAToR.setText(" ");
                 new DialogBoxInssetPresenter("Convertion Arabe to Roman", valA.getText(), result);
             }
@@ -176,10 +185,11 @@ public class CalculatorRomainPresenter extends Composite {
     private void convertDate() {
         //Verif
         if (!FieldVerifier.isValidDate(valD.getText())) {
-            errorLabelAToR.addStyleName("serverResponseLabelError");
-            errorLabelAToR.setText("Format incorect");
+            errorLabelD.addStyleName("serverResponseLabelError");
+            errorLabelD.setText("Format incorect");
             return;
         }
+        
         //call server
         service.convertDateYears(valD.getText(), new AsyncCallback<String>() {
             public void onFailure(Throwable caught) {
