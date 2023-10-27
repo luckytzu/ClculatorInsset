@@ -1,3 +1,4 @@
 # Module calculatorInsset
 # RPC service class, partial path of RPC policy file
-org.insset.client.GreetingService, 94756CD62EE14D6FDB91D0C061ABF245.gwt.rpc
+org.insset.client.service.ExempleService, 15B11C2B3F16BAEAB826DBF9532DAC4E.gwt.rpc
+org.insset.client.service.RomanConverterService, 86BF2BF89B8D7D637A4BDD3C38A15078.gwt.rpc
