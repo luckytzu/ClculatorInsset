@@ -144,7 +144,7 @@ public class CalculatorRomainPresenter extends Composite {
     /**
      * call server
      */
-    private void convertArabeToRoman() {
+    public void convertArabeToRoman() {
         Integer value = null;
         
         try {
@@ -199,7 +199,7 @@ public class CalculatorRomainPresenter extends Composite {
     /**
      * call server
      */
-    private void convertDate() {
+    public void convertDate() {
         String date = valD.getText(); 
         int day = 0;
         int month = 0;
