@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.insset.client.Percent;
+package org.insset.client.percent;
 
 /**
  *
@@ -11,12 +11,17 @@ package org.insset.client.Percent;
  */
 public class Percent {
     
+    //Methode qui permet de diviser 2 nombres et d'obtenir leurs reste
     private String Divider(int divided, int divider) {
         int quotient = 0;
         int remain = 0;
         
         if(divider > 0 && divider <= 200 && divided > 0 && divided <= 200 ){
+            
+            //Le reste de la division
             remain = divided % divider;
+            
+            //Le résultat de la division (2 si(4/2))
             quotient = divided / divider;
             
             return "Le résultat de la division est "+quotient+" et le reste : "+remain;
@@ -27,7 +32,9 @@ public class Percent {
         }
 
     }
-    public String GetInitPriceWith(int finalPrice, float percent) 
+
+    //Methode qui permet d'obtenir le prix initial avec le prix final et un pourcentage
+    private String GetInitPriceWith(int finalPrice, float percent) 
     {
 
     // Calcul du prix initial
