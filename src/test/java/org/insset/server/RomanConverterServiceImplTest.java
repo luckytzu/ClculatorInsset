@@ -58,11 +58,12 @@ public class RomanConverterServiceImplTest {
     @Test
     public void testConvertRomanToArabe() {
         System.out.println("convertRomanToArabe");
-        String nbr = "";
+        String nbr = "2";
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
         Integer expResult = null;
         Integer result = instance.convertRomanToArabe(nbr);
         assertEquals(expResult, result);
+        System.out.println(result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -75,9 +76,10 @@ public class RomanConverterServiceImplTest {
         System.out.println("convertArabeToRoman");
         Integer nbr = null;
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
-        String expResult = "";
+        String expResult = "II";
         String result = instance.convertArabeToRoman(nbr);
         assertEquals(expResult, result);
+        System.out.println(result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
