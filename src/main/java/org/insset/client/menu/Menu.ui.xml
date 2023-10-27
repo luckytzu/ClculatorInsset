@@ -7,6 +7,7 @@
            <g:MenuItem ui:field="accueil">Exemple</g:MenuItem>
            <g:MenuItem ui:field="romain">Romain</g:MenuItem>
            <g:MenuItem ui:field="pourcentage">Pourcentage</g:MenuItem>
+           <g:MenuItem ui:field="division">Division</g:MenuItem>
         </g:MenuBar>
 
     </div>

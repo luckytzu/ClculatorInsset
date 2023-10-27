@@ -36,6 +36,9 @@ public class Menu extends Composite {
      */
     @UiField
     public MenuItem romain;
+    
+    @UiField
+    public MenuItem division;
 
     interface MenuUiBinder extends UiBinder<HTMLPanel, Menu> {
     }
@@ -72,5 +75,15 @@ public class Menu extends Composite {
                 History.newItem("roman", true);
             }
         });
+        
+        division.setScheduledCommand(new Scheduler.ScheduledCommand() {
+
+            @Override
+            public void execute() {
+
+                History.newItem("division", true);
+            }
+        });
+        
     }
 }
