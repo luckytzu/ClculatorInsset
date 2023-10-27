@@ -11,9 +11,9 @@ package org.insset.client.Percent;
  */
 public class Percent {
     
-    private String Divider(int divided, int divider) {
+    public String Divider(int divided, int divider) {
         int quotient = 0;
-        int remain = 0;
+        int remain = 0;  
         
         if(divider > 0 && divider <= 200 && divided > 0 && divided <= 200 ){
             remain = divided % divider;
